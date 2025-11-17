@@ -1,0 +1,49 @@
+.fundo {
+margin: 0;
+background-image: url('hornetecb1000.jpg');
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 100vh;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+
+} 
+.fundo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 0.4 = transparência */
+}
+#galeria{
+
+    padding: 40px;
+    /*isso faz o posiconamento em lado  */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    background: #fff;
+}
+#galeria img{
+    width: 100%;
+    height: 200px;
+    /*isso faz uma aplicao de imagem */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /*Isso faz uma suavizacao */
+    transition: transform .3s;
+}
+#galeria img:hover{
+    /*isso faz o zoom ao passaar o mouse */
+    transform : scale(1.05);
+}
+#localizacao{
+    display: flex;
+    justify-content: center;
+}
